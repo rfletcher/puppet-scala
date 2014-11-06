@@ -3,6 +3,8 @@
 # Install the Typesafe apt repository
 #
 class scala::repository{
+  validate_re($::osfamily, '^Debian$', "This module only works on Debian-based distros")
+
   include ::apt
   include ::apt::update
   include ::wget
