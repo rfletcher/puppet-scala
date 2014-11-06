@@ -3,7 +3,11 @@
 # Install the Typesafe apt repository
 #
 class scala::repository{
+  include ::apt
+  include ::apt::update
   include ::wget
+
+  anchor { 'scala::repository::begin': } ->
 
   wget::fetch { 'download-typesafe-repo':
     source      => 'http://apt.typesafe.com/repo-deb-build-0002.deb',
@@ -14,12 +18,8 @@ class scala::repository{
   package { 'typesafe-repo':
     ensure   => installed,
     provider => 'dpkg',
-    source   => '/usr/local/src/repo-deb-build-0002.deb',
-    notify   => Exec['apt-update-typesafe'],
-  }
+    notify   => Class['::apt::update'],
+  } ->
 
-  exec { 'apt-update-typesafe':
-    command     => '/usr/bin/apt-get update',
-    refreshonly => true,
-  }
+  anchor { 'scala::repository::end': }
 }
