@@ -16,5 +16,4 @@ describe 'scala', :type => :class do
       }.to raise_error(Puppet::Error, /This module relies on a deb package/)
     end
   end
-
 end
