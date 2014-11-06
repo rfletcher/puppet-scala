@@ -1,10 +1,8 @@
 Puppet module for installing the Typesafe Scala distribution.
  This module is also available on the [Puppet Forge](https://forge.puppetlabs.com/garethr/scala)
 
-[![Build
-Status](https://secure.travis-ci.org/garethr/garethr-scala.png)](http://travis-ci.org/garethr/garethr-scala)
-[![Dependency
-Status](https://gemnasium.com/garethr/garethr-scala.png)](http://gemnasium.com/garethr/garethr-scala)
+[![Build Status](https://secure.travis-ci.org/rfletcher/puppet-scala.png)](http://travis-ci.org/rfletcher/rfletcher-scala)
+[![Dependency Status](https://gemnasium.com/garethr/garethr-scala.png)](http://gemnasium.com/garethr/garethr-scala)
 
 ## Usage
 
