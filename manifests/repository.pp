@@ -15,7 +15,7 @@ class scala::repository{
   } ->
 
   package { 'typesafe-repo':
-    ensure   => installed,
+    ensure   => present,
     source   => '/usr/local/src/typesafe-repo.deb',
     provider => 'dpkg',
     notify   => Class['::apt::update'],
