@@ -8,9 +8,14 @@ Status](https://gemnasium.com/garethr/garethr-scala.png)](http://gemnasium.com/g
 
 ## Usage
 
-The module includes a single class:
+Install the full scala stack:
 
-    include 'scala'
+    include scala
 
-This installs the typesafe debian repository along with scala, sbt and
-gt8.
+...or only the parts of the stack you need, choosing from these classes:
+
+    include scala::giter8
+    include scala::lang
+    include scala::sbt
+
+All software is installed from the Typesafe Apt repository.
