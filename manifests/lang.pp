@@ -6,6 +6,7 @@ class scala::lang {
   include ::scala::repository
 
   package { 'scala':
+    ensure  => present,
     require => Class['::scala::repository'],
   }
 }

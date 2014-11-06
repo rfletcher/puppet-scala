@@ -6,6 +6,7 @@ class scala::giter8 {
   include ::scala::repository
 
   package { 'g8':
+    ensure  => present,
     require => Class['::scala::repository'],
   }
 }
